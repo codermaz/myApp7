@@ -63,11 +63,11 @@ public class mainController extends AppCompatActivity {
                new TimePickerDialog(
                        mainController.this,
                        new TimePickerDialog.OnTimeSetListener() {
-                            // listen Time Dialog
+                           // listen Time Dialog
                            @Override
                            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                                // show selected time in the EditText
-                               getTimeText.setText(cHour+":"+cMinute);
+                               // show selected time in the EditText
+                               getTimeText.setText(new StringBuilder().append(hourOfDay).append(":").append(minute).toString());
                            }
                        }, cHour, cMinute, true
 
